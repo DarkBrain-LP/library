@@ -440,3 +440,8 @@ def not_found(error):
         "error": 503,
         "message": "Service unavailable"
     }), 503
+
+
+
+if __name__ == '__main__':
+    app.run()
