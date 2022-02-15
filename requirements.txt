@@ -20,6 +20,7 @@ numpy==1.22.2
 ordereddict==1.1
 PasteScript==3.2.1
 python-dotenv==0.19.2
+psycopg2==2.9.3
 setproctitle==1.2.2
 tornado==6.1
 typing_extensions==4.1.1
