@@ -10,7 +10,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-password = quote_plus(os.getenv('db_password'))
+password = quote_plus(str(os.getenv('db_password')))
 host = os.getenv('hostname')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://cmqrxaoprpisab:2492e1c72cb546fe05518e36460d5d8495dedb07fa7e708eeba5e142e0488067@ec2-52-207-74-100.compute-1.amazonaws.com:5432/d2sar5mi3d1ho2'
 # permet de refuser mes warning dans le code sur le serveur flask
