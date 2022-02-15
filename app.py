@@ -107,7 +107,7 @@ class Livre(db.Model):
         db.session.commit()
 
 
-db.create_all()
+#db.create_all()
 
 '''
 Les endpoints de l'API
