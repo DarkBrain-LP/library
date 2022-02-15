@@ -3,7 +3,7 @@ from urllib.parse import quote_plus
 from flask import Flask, jsonify, abort, redirect, request, url_for
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
-from flask_cors import CORS
+#from flask_cors import CORS
 
 
 load_dotenv()
@@ -12,16 +12,15 @@ app = Flask(__name__)
 
 password = quote_plus(os.getenv('db_password'))
 host = os.getenv('hostname')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:{}@{}:5432/library'.format(
-    password, host)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://cmqrxaoprpisab:2492e1c72cb546fe05518e36460d5d8495dedb07fa7e708eeba5e142e0488067@ec2-52-207-74-100.compute-1.amazonaws.com:5432/d2sar5mi3d1ho2'
 # permet de refuser mes warning dans le code sur le serveur flask
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 #CORS(app, resources={r"*/api/*" : {origins: '*'}})
-CORS(app)
 
 """
+CORS(app)
 @app.after_request
 def after_request(response):
     response.headers.add('Access-Control-Allow-Headers',
@@ -441,4 +440,4 @@ def not_found(error):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
