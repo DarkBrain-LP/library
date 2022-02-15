@@ -42,7 +42,7 @@ This will install all of the required packages we selected within the `requireme
 ## Database Setup
 With Postgres running, restore a database using the plants_database.sql file provided. From the backend folder in terminal run:
 ```bash
-psql plants_database < plants_database.sql
+psql library < library_database.sql
 ```
 
 ## Running the server
@@ -73,6 +73,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 Getting starter
 
 Base URL: At present this app can only be run locally and is not hosted as a base URL. The backend app is hosted at the default, http://localhost:5000; which is set as a proxy in frontend configuration.
+
 
 ## Error Handling
 Errors are retourned as JSON objects in the following format:
